@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenSVG</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <canvas id="c" width="800" height="600" class="c"></canvas>
+    <div>
+        <button id="svg-load">Load SVG || Load Circuit</button>
+        <select id="option" size="1">
+            <option value="group">Group</option>
+            <option value="wgroup">Without Group</option>
+        </select>
+    </div>
+
+
+    <button id="json">Group</button>
+    <button id="ugroup">Ungroup</button>
+    <div>
+        <input type="radio" name="wire" id="wire" value="Connect">Enable Wiring<br>
+        <!-- <input type="radio" name="wire" id="no_wire" value="DisConnect">Disable Wiring<br> -->
+        <button type="button" onclick="wiring()">
+            Submit
+        </button>
+    </div>
+
+
+
+    <div id="svg3" class="svg" data-url="mics.svg">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="600"
+            height="500">
+            <defs />
+            <g>
+                <path fill="white" stroke="black" paint-order="fill stroke markers"
+                    d=" M 50.5 240.5 L 90.5 240.5 L 90.5 280.5 L 50.5 280.5 L 50.5 240.5 Z" stroke-miterlimit="10"
+                    stroke-width="3" stroke-dasharray="" />
+                <path fill="none" stroke="none" /><text fill="green" stroke="none" font-family="Raleway"
+                    font-size="20px" font-style="normal" font-weight="normal" text-decoration="normal" x="70" y="265"
+                    text-anchor="middle" dominant-baseline="alphabetic">0</text>
+                <path fill="white" stroke="rgb(0,0,0)" paint-order="fill stroke markers"
+                    d=" M 70.5 50.5 L 60.5 60.5 L 80.5 60.5 L 70.5 50.5 Z M 70.5 60.5 L 70.5 70.5" stroke-opacity="1"
+                    stroke-miterlimit="10" stroke-width="3" stroke-dasharray="" />
+                <path fill="white" stroke="blue" paint-order="fill stroke markers"
+                    d=" M 490.5 160.5 L 510.5 160.5 L 510.5 180.5 L 490.5 180.5 L 490.5 160.5 Z" stroke-miterlimit="10"
+                    stroke-width="3" stroke-dasharray="" />
+                <path fill="none" stroke="none" /><text fill="green" stroke="none" font-family="Raleway"
+                    font-size="20px" font-style="normal" font-weight="normal" text-decoration="normal" x="500" y="175"
+                    text-anchor="middle" dominant-baseline="alphabetic">1</text>
+                <path fill="none" stroke="lightgreen" paint-order="fill stroke markers" d=" M 70.5 70 L 70.5 110"
+                    stroke-linecap="round" stroke-miterlimit="10" stroke-width="3" stroke-dasharray="" />
+                <path fill="none" stroke="red" paint-order="fill stroke markers" d=" M 90 260.5 L 140 260.5"
+                    stroke-linecap="round" stroke-miterlimit="10" stroke-width="3" stroke-dasharray="" />
+                <path fill="none" stroke="lightgreen" paint-order="fill stroke markers" d=" M 490 170.5 L 380 170.5"
+                    stroke-linecap="round" stroke-miterlimit="10" stroke-width="3" stroke-dasharray="" />
+                <path fill="none" stroke="lightgreen" paint-order="fill stroke markers" d=" M 70 110.5 L 140 110.5"
+                    stroke-linecap="round" stroke-miterlimit="10" stroke-width="3" stroke-dasharray="" />
+                <path fill="none" stroke="lightgreen" paint-order="fill stroke markers" d=" M 140.5 110 L 140.5 260"
+                    stroke-linecap="round" stroke-miterlimit="10" stroke-width="3" stroke-dasharray="" />
+                <path fill="none" stroke="lightgreen" paint-order="fill stroke markers" d=" M 140 110.5 L 380 110.5"
+                    stroke-linecap="round" stroke-miterlimit="10" stroke-width="3" stroke-dasharray="" />
+                <path fill="none" stroke="lightgreen" paint-order="fill stroke markers" d=" M 140 260.5 L 380 260.5"
+                    stroke-linecap="round" stroke-miterlimit="10" stroke-width="3" stroke-dasharray="" />
+                <path fill="none" stroke="lightgreen" paint-order="fill stroke markers" d=" M 380.5 110 L 380.5 170"
+                    stroke-linecap="round" stroke-miterlimit="10" stroke-width="3" stroke-dasharray="" />
+                <path fill="none" stroke="lightgreen" paint-order="fill stroke markers" d=" M 380.5 170 L 380.5 260"
+                    stroke-linecap="round" stroke-miterlimit="10" stroke-width="3" stroke-dasharray="" />
+                <path fill="green" stroke="none" paint-order="stroke fill markers"
+                    d=" M 73 70 A 3 3 0 1 1 72.99999850000013 69.9970000005 Z" />
+                <path fill="green" stroke="none" paint-order="stroke fill markers"
+                    d=" M 93 260 A 3 3 0 1 1 92.99999850000013 259.9970000005 Z" />
+                <path fill="none" stroke="green" paint-order="fill stroke markers"
+                    d=" M 98.5 260.5 A 8 8 0 1 1 98.49999600000034 260.49200000133334 Z" stroke-linecap="round"
+                    stroke-miterlimit="10" stroke-width="3" stroke-dasharray="" />
+                <path fill="green" stroke="none" paint-order="stroke fill markers"
+                    d=" M 493 170 A 3 3 0 1 1 492.9999985000001 169.9970000005 Z" />
+                <path fill="lightgreen" stroke="none" paint-order="stroke fill markers"
+                    d=" M 73 110 A 3 3 0 1 1 72.99999850000013 109.9970000005 Z" />
+                <path fill="lightgreen" stroke="none" paint-order="stroke fill markers"
+                    d=" M 143 110 A 3 3 0 1 1 142.99999850000012 109.9970000005 Z" />
+                <path fill="lightgreen" stroke="none" paint-order="stroke fill markers"
+                    d=" M 143 260 A 3 3 0 1 1 142.99999850000012 259.9970000005 Z" />
+                <path fill="none" stroke="green" paint-order="fill stroke markers"
+                    d=" M 148.5 260.5 A 8 8 0 1 1 148.49999600000032 260.49200000133334 Z" stroke-linecap="round"
+                    stroke-miterlimit="10" stroke-width="3" stroke-dasharray="" />
+                <path fill="lightgreen" stroke="none" paint-order="stroke fill markers"
+                    d=" M 383 110 A 3 3 0 1 1 382.9999985000001 109.9970000005 Z" />
+                <path fill="lightgreen" stroke="none" paint-order="stroke fill markers"
+                    d=" M 383 170 A 3 3 0 1 1 382.9999985000001 169.9970000005 Z" />
+                <path fill="lightgreen" stroke="none" paint-order="stroke fill markers"
+                    d=" M 383 260 A 3 3 0 1 1 382.9999985000001 259.9970000005 Z" />
+            </g>
+        </svg>
+
+    </div>
+    <br />
+
+    <button id="inp-btn">Input Element</button>
+    <div id="inp-ele" class="svg" data-url="mics.svg">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30">
+            <path fill="#fff" stroke="#000" paint-order="fill stroke markers" d="M5 5h20v20H5V5z" stroke-miterlimit="10"
+                stroke-width="3" /><text fill="green" font-family="Georgia" font-size="20" text-decoration="normal"
+                x="15" y="20" text-anchor="middle" dominant-baseline="alphabetic">1</text>
+            <path fill="green" paint-order="stroke fill markers" d="M28 15a3 3 0 110-.003z" />
+        </svg>
+    </div>
+
+
+    <button id="btn-btn">Button Element</button>
+    <div id="button-ele" class="svg" data-url="mics.svg">
+        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60">
+            <path fill="none" stroke="#353535" paint-order="fill stroke markers" d="M30 30h20" stroke-miterlimit="10"
+                stroke-width="5" />
+            <path fill="#ddd" stroke="#353535" paint-order="stroke fill markers" d="M32 30a12 12 0 110-.012"
+                stroke-miterlimit="10" stroke-width="5" />
+            <path fill="green" paint-order="stroke fill markers" d="M53 30a3 3 0 110-.003z" />
+        </svg>
+    </div>
+
+    <button id="opt-btn">Output Element</button>
+    <div id="opt-ele" class="svg" data-url="mics.svg">
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30">
+            <path fill="#fff" stroke="red" paint-order="fill stroke markers" d="M5 5h20v20H5V5z" stroke-miterlimit="10"
+                stroke-width="3" /><text fill="green" font-family="Georgia" font-size="20" text-decoration="normal"
+                x="15" y="20" text-anchor="middle" dominant-baseline="alphabetic">x</text>
+            <path fill="green" paint-order="stroke fill markers" d="M8 15a3 3 0 110-.003z" />
+        </svg>
+    </div>
+
+
+
+    <!-- *********  START  ************* -->
+    <div class="buttonsWrapper">
+        <p class="buttonsTitle">ChooseCircuit</p>
+        <input id="myImg" type="file" accept="image/*">
+    </div>
+    <!-- **********  STOP  ************ -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.4.0/fabric.min.js"
+        integrity="sha512-Ly9uI3QY88jVXCgkORH2A4Qqz5xYm1pew9jEgedgSpyEg9asvyPISK+CY7QNDN3CMftXU/KLNwQR7XUUo7Cqag=="
+        crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
